@@ -1,0 +1,13 @@
+<div>
+  <mat-card  class="mat-elevation-z8 detail-view" *ngIf="noteDetails">
+    <mat-card-title>{{ noteDetails.name }}</mat-card-title>
+    <mat-card-subtitle>Category: {{ noteDetails.category }}</mat-card-subtitle>
+    <mat-card-content>
+      <p>{{ noteDetails.note }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" routerLink="../../notes">Back to Notes</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-spinner class="spinner" *ngIf="!noteDetails"></mat-spinner>
+</div>
